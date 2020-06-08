@@ -12,13 +12,13 @@ const reverse = (str) => {
         throw TypeError('Parameter should be of type String');
     }
 
-    let charCodeArray = [];
+    let codePointArray = [];
     let reverseString = '';
     [...str].forEach((char, index) => {
-        charCodeArray.push(str.codePointAt(index));
+        codePointArray.push(str.codePointAt(index));
     });
 
-    charCodeArray.reverse().forEach(codePoint => {
+    codePointArray.reverse().forEach(codePoint => {
         reverseString += String.fromCodePoint(codePoint)
     })
 
